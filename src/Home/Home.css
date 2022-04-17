@@ -1,3 +1,6 @@
+body{
+    background-color:lightblue;
+}
 .banner{
     border: 1px solid blue;
     width: 80%;
@@ -13,6 +16,7 @@
     border: 1px solid black;
     width: 25%;
     margin: 10px auto;
+    padding: 4px;
 }
 .teaching-option img{
     width: 100%;
