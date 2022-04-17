@@ -5,6 +5,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from '../../src/Firebase/firebase.init'
 import "./Login.css";
+import google from '../../src/images/google.png'
 
 
 const Login = () => {
@@ -33,9 +34,6 @@ const Login = () => {
             setUserInfo({...userInfo, email: ""})
         }
 
-        
-
-        // setEmail(e.target.value);
     }
     const handlePasswordChange = (e) => {
         const passwordRegex = /.{6,}/;
@@ -89,7 +87,7 @@ const Login = () => {
 
     return (
         <div className="login-container">
-            <div className="login-title">LOGIN</div>
+            <div className="login">Login</div>
             <form className="login-form" onSubmit={handleLogin}>
                 <input type="text" placeholder="Your Email" onChange={handleEmailChange} />
                 {errors?.email && <p className="error-message">{errors.email}</p>}
@@ -97,14 +95,13 @@ const Login = () => {
                 {errors?.password && <p className="error-message">{errors.password}</p> }
                 <button>Login</button>
 
-                {/* {error && <p className="error-message">{error}</p> } */}
-                {/* {hookError && <p className="error-message">{hookError?.message}</p>} */}
                 <ToastContainer />
 
-                <p>Don't have an account? <Link to="/signup">Sign up first</Link> </p>
+                <p className="toggle">Have No account?  <Link className="toggle" to="/signup">Sign-up</Link> </p>
+                <div className="OR">-------------------or-------------------</div>
             </form>
 
-            <button onClick={() => signInWithGoogle()}>Google</button>
+            <button onClick={() => signInWithGoogle()}> <img src={google} alt="" />SignIn with Google</button>
         </div>
     );
 };

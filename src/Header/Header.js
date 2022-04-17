@@ -12,13 +12,13 @@ const Header = () => {
             >
                 Home
             </NavLink>
-            <NavLink
+            {/* <NavLink
                 to="/Services"
                 style={({ isActive }) =>
                     (isActive ? {textDecoration: 'underline', color: 'red' } : { color: 'blue' })}
             >
                 Services
-            </NavLink>
+            </NavLink> */}
             <NavLink
                 to="/Blogs"
                 style={({ isActive }) =>

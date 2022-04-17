@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from "../Firebase/firebase.init";
-import "../Login/Login.css";
+import "./../Login/Login.css"
 
 const Signup = () => {
     const [userInfo, setUserInfo] = useState({
@@ -93,14 +93,14 @@ const Signup = () => {
 
     return (
         <div className="login-container">
-            <div className="login-title">Sign up</div>
+            <div className="login">Sign up</div>
             <form className="login-form" onSubmit={handleLogin}>
                 <input type="text" placeholder="Your Email" onChange={handleEmailChange} />
                 {errors?.email && <p className="error-message">{errors.email}</p>}
-                <div className="relative">
-                    <input type={showPass ? "text" : "password"} placeholder="password" onChange={handlePasswordChange} />
+                <div>
+                    <input type= "password" placeholder="password" onChange={handlePasswordChange} />
                     {errors?.password && <p className="error-message">{errors.password}</p>}
-                    <p className="absolute top-3 right-5" onClick={() => setShowPass(!showPass)}>🔥</p>
+                    
                 </div>
                 <input
                     type="password"
@@ -109,9 +109,8 @@ const Signup = () => {
                 />
 
                 <button>Sign up</button>
-
-                {/* {error && <p className="error-message">{error}</p> } */}
-                {/* {hookError && <p className="error-message">{hookError?.message}</p>} */}
+                <p className="toggle">Already Have An Account?  <Link className="toggle" to="/Login">Login</Link> </p>
+                
                 <ToastContainer />
             </form>
         </div>

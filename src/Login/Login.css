@@ -1,20 +1,20 @@
 .login-container {
     width: 350px;
-    margin: 4rem auto;
-    height: 500px;
+    margin: 20PX auto;
+    height: 487px;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
-    background: #062338;
+    background: #03213a;
 }
 
 
-.login-title {
+.login {
     text-align: center;
     margin-top: 10px;
     font-weight: 900;
-    font-size: 1.8rem;
-    color: #1da1f2;
+    font-size: 1.6rem;
+    color: #e5ebee;
     letter-spacing: 1px;
 }
 
@@ -56,22 +56,28 @@
 }
 
 .login-container button {
-    color: white;
+    color: #0a0202;
     margin-top: 20px;
-    background: #1da1f2;
-    height: 40px;
+    background: #edf2f5;
+    height: 30px;
     border-radius: 20px;
     cursor: pointer;
     font-weight: 900;
-    transition: 0.5s;
+    
+   
 }
-
+.toggle{
+    color: white;
+}
+.login-container button img {
+   height: 20px;
+}
+.OR{
+    color: white;
+}
 
 .error-message{
     font-size: 12px;
     color: red;
     margin:10px;
 }
-/* .error-message::before{
-    content: "❌ ";
-} */

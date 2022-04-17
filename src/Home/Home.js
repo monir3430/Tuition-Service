@@ -4,6 +4,7 @@ import batch from '../images/batch.jpg'
 import virtual from '../images/virtual.jpg'
 import home from '../images/home.jpg'
 import banner from '../images/banner.jpg'
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,7 +26,9 @@ const Home = () => {
                 <h5>Subject : Any Subject Except Science</h5>
                 
                 <h5>Service Charge : 1000 tk/Month</h5>
+                <Link to="/Services">
                 <button className='button'>Details</button>
+                </Link>
             </div>
             <div className='teaching-option'>
                 <h3> 1. Batch Teaching</h3>
@@ -33,7 +36,9 @@ const Home = () => {
                 <h5>Category : Grouping</h5>
                 <h5>Subject : Any Subject Except Science</h5>
                 <h5>Service Charge : 1500 tk/Month</h5>
+                <Link to="/Services">
                 <button className='button'>Details</button>
+                </Link>
             </div>
             <div className='teaching-option'>
                 <h3> 1. Virtual Teaching</h3>
@@ -41,7 +46,10 @@ const Home = () => {
                 <h5>Category : Grouping</h5>
                 <h5>Subject : Any Subject Except Science</h5>
                 <h5>Service Charge : 700 tk/Month</h5>
+                <Link to="/Services">
                 <button className='button'>Details</button>
+                </Link>
+                
             </div>
         </div>
     );
