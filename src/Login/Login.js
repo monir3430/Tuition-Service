@@ -84,14 +84,15 @@ const Login = () => {
             }
         }
     }, [hookError, googleError])
+    
 
     return (
         <div className="login-container">
             <div className="login">Login</div>
             <form className="login-form" onSubmit={handleLogin}>
-                <input type="text" placeholder="Your Email" onChange={handleEmailChange} />
+                <input type="text" placeholder="Your Email" onChange={handleEmailChange} required/>
                 {errors?.email && <p className="error-message">{errors.email}</p>}
-                <input type="password" placeholder="password" onChange={handlePasswordChange} />
+                <input type="password" placeholder="password" onChange={handlePasswordChange} required />
                 {errors?.password && <p className="error-message">{errors.password}</p> }
                 <button>Login</button>
 

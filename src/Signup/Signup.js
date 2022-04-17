@@ -18,7 +18,6 @@ const Signup = () => {
         general: "",
     });
 
-    const [showPass, setShowPass] = useState(false);
 
     const [createUserWithEmailAndPassword, user, loading, hookError] =
         useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
@@ -95,10 +94,10 @@ const Signup = () => {
         <div className="login-container">
             <div className="login">Sign up</div>
             <form className="login-form" onSubmit={handleLogin}>
-                <input type="text" placeholder="Your Email" onChange={handleEmailChange} />
+                <input type="text" placeholder="Your Email" onChange={handleEmailChange} required />
                 {errors?.email && <p className="error-message">{errors.email}</p>}
                 <div>
-                    <input type= "password" placeholder="password" onChange={handlePasswordChange} />
+                    <input type= "password" placeholder="password" onChange={handlePasswordChange} required/>
                     {errors?.password && <p className="error-message">{errors.password}</p>}
                     
                 </div>

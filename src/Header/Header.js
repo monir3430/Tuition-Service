@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { auth } from '../../src/Firebase/firebase.init'
 import './Header.css';
 
 const Header = () => {
@@ -27,6 +28,13 @@ const Header = () => {
                 Blogs
             </NavLink>
             <NavLink
+                to="/About"
+                style={({ isActive }) =>
+                    (isActive ? {textDecoration: 'underline', color: 'red' } : { color: 'blue' })}
+            >
+               About Me
+            </NavLink>
+            <NavLink
                 to="/Login"
                 style={({ isActive }) =>
                     (isActive ? { textDecoration: 'underline', color: 'red' } : { color: 'blue' })}
@@ -39,13 +47,6 @@ const Header = () => {
                     (isActive ? {textDecoration: 'underline', color: 'red' } : { color: 'blue' })}
             >
                Register
-            </NavLink>
-            <NavLink
-                to="/About"
-                style={({ isActive }) =>
-                    (isActive ? {textDecoration: 'underline', color: 'red' } : { color: 'blue' })}
-            >
-               About Me
             </NavLink>
         </div>
     );
