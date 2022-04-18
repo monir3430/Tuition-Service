@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
 
     return (
-        <div>
+        <div className='home'>
             <h1>Welcome to Tuition</h1>
             <div className='banner'>
                 <h1>Your Child's Future is First Priority</h1>

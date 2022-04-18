@@ -32,3 +32,10 @@ body{
     
     
 }
+
+@media screen and (max-width: 800px) {
+    .home{
+        margin-top: 150px;
+       
+    }
+  }

@@ -24,10 +24,10 @@ function App() {
         <Route path='/Services' element = {
 
           <RequiredAuth>
-            <Services/>
+            <Services></Services>
           </RequiredAuth>
         }>
-          
+
         </Route>
        
   
