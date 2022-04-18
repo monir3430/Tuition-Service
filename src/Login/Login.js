@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { auth } from '../../src/Firebase/firebase.init'
 import "./Login.css";
 import google from '../../src/images/google.png'
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 
 
 const Login = () => {
@@ -85,6 +86,7 @@ const Login = () => {
         }
     }, [hookError, googleError])
     
+    
 
     return (
         <div className="login-container">
@@ -103,6 +105,7 @@ const Login = () => {
             </form>
 
             <button onClick={() => signInWithGoogle()}> <img src={google} alt="" />SignIn with Google</button>
+            <button onClick={() => signInWithGoogle()}> Password Reset</button>
         </div>
     );
 };
