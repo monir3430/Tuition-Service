@@ -17,3 +17,18 @@
     background-color: rgb(224, 127, 79);
 }
 
+@media screen and (max-width: 800px) {
+.navbar{
+    width: 500px;
+
+        }
+.navbar a{
+    font-size: 22px;
+    margin-right: 10px;
+    text-align: start;
+
+}
+       
+    
+  }
+

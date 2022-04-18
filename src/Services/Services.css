@@ -1,5 +1,18 @@
-.details{
-   
-    width: 25%;
-    margin: 10px auto;
+.all-programme{
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+
+}
+.Services{
+margin: 10px auto;
+
+}
+.service-option{
+    padding: 10px;
+    width: 500px;
+    margin: 10px
+    
+}
+.service-option img{
+    width: 490px;
 }

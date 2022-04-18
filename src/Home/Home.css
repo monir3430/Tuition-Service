@@ -15,7 +15,7 @@ body{
 }
 .teaching-option{
     border: 1px solid black;
-    width: 25%;
+    /* width: 25%; */
     margin: 10px auto;
     padding: 4px;
 }
@@ -32,10 +32,17 @@ body{
     
     
 }
+.Packages{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 10px;
+}
 
 @media screen and (max-width: 800px) {
-    .home{
-        margin-top: 150px;
+    .Packages{
+        display: grid;
+        grid-template-columns: 1fr;
        
     }
   }

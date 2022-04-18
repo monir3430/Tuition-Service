@@ -3,14 +3,18 @@ import React from 'react';import batch from '../images/batch.jpg'
 import virtual from '../images/virtual.jpg'
 import home from '../images/home.jpg'
 import { Link } from 'react-router-dom';
+import Importance from '../../src/images/Importance.png';
 
 
 const Services = () => {
    
     return (
-       <div>
+       <div className='all-programme'>
             
-            <div className='teaching-option'>
+            <div className='Services'>
+                <h1>Here is the running program</h1>
+            
+            <div className='service-option'>
                 <h3> 1. Home Teaching</h3>
                 <img src={home} alt="" />
                 <h5>Category : Single Entity</h5>
@@ -21,7 +25,7 @@ const Services = () => {
                 <button className='button'>Contact Me</button>
                 </Link>
             </div>
-            <div className='teaching-option'>
+            <div className='service-option'>
                 <h3> 1. Batch Teaching</h3>
                 <img src={batch} alt="" />
                 <h5>Category : Grouping</h5>
@@ -31,7 +35,7 @@ const Services = () => {
                 <button className='button'>Contact Me</button>
                 </Link>
             </div>
-            <div className='teaching-option'>
+            <div className='service-option'>
                 <h3> 1. Virtual Teaching</h3>
                 <img src={virtual} alt="" />
                 <h5>Category : Grouping</h5>
@@ -40,6 +44,22 @@ const Services = () => {
                 <Link to="/Contact">
                 <button className='button'>Contact Me</button>
                 </Link>
+            </div>
+            </div>
+            <div>
+            <h1>Upcoming Programme</h1>
+            <h3>IELTS</h3>
+            <h3>General Knowledge</h3>
+            <h3>Varsity Couching</h3>
+            <h3>Job Consultant</h3>
+
+            <img src={Importance} alt="" />
+            <h4>A real teacher is a real hero. The teacher is a guidance of ultimate goal</h4>
+
+            
+
+
+
             </div>
         </div>
     );
