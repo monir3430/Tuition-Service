@@ -1,11 +1,12 @@
 import { useRef, useState } from "react";
 import {useSendPasswordResetEmail,useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
-import { Link, Navigate, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { auth } from '../../src/Firebase/firebase.init'
 import "./Login.css";
 import google from '../../src/images/google.png'
+import Loading from "../Loading/Loading";
 
 
 
@@ -15,7 +16,7 @@ const Login = () => {
 const [email, setEmail] = useState("");
 const [password, setPassword] = useState("");
 const [error, setError] = useState("");
-const[SignInWithEmail, user, loding, hookError] = useSignInWithEmailAndPassword(auth)
+const[SignInWithEmail, user, loading, hookError] = useSignInWithEmailAndPassword(auth)
 const [signInWithGoogle] = useSignInWithGoogle(auth);
 const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
@@ -50,14 +51,17 @@ const handleLogin = (event)=>{
     console.log(email, password)
     SignInWithEmail(email, password)
 }
-
-       const Navigate = useNavigate();
+ 
+       const navigate = useNavigate();
        const location = useLocation();
-       const from = location.state?.from?.pathname || "/";
+       const from = location.state?.from?.pathname || "/Services";
 
+       if (loading) {
+        return <Loading></Loading>
+    }
        
            if (user) {
-               Navigate(from, {replace:true});
+            navigate(from, { replace: true });
            
 
            
@@ -82,9 +86,9 @@ const handleLogin = (event)=>{
         <div className="login-container">
             <div className="login">Login</div>
             <form className="login-form" onSubmit={ handleLogin}>
-                <input ref={emailRef} type="text" placeholder="Your Email" onChange={EmailChange} required/>
+                <input ref={emailRef} type="text" placeholder="Enter Email" onChange={EmailChange} required/>
         
-                <input type="password" placeholder="password" onChange={PasswordChange} required />
+                <input type="password" placeholder=" Enter Password" onChange={PasswordChange} required />
                 
                 <button>Login</button>
                 {error && <p className="error-message">{error}</p>}
