@@ -16,6 +16,9 @@
 .navbar a:hover{
     background-color: rgb(224, 127, 79);
 }
+.userToggle{
+    display: inline;
+}
 
 @media screen and (max-width: 800px) {
 .navbar{

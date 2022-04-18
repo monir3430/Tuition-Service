@@ -44,6 +44,19 @@ const Header = () => {
             </NavLink>
 
 
+            
+
+            {user ? (<button onClick={() => signOut(auth)}>SignOut</button>) : <div className='userToggle'>
+            
+            <NavLink
+                to="/Login"
+                style={({ isActive }) =>
+                    (isActive ? { textDecoration: 'underline', color: 'red' } : { color: 'blue' })}>
+                
+                Login
+            
+            
+            </NavLink>
             <NavLink
                 to="/Signup"
                 style={({ isActive }) =>
@@ -53,14 +66,9 @@ const Header = () => {
 
 
             </NavLink>
-
-            {user ? (<button onClick={() => signOut(auth)}>SignOut</button>) : (<NavLink
-                to="/Login"
-                style={({ isActive }) =>
-                    (isActive ? { textDecoration: 'underline', color: 'red' } : { color: 'blue' })}
-            >
-                Login
-            </NavLink>)}
+            
+            
+            </div>}
 
 
 
