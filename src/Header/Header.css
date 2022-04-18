@@ -19,6 +19,10 @@
 .userToggle{
     display: inline;
 }
+.user-pic img{
+    width: 20px;
+    height: 20px;
+}
 
 @media screen and (max-width: 800px) {
 .navbar{

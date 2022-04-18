@@ -46,7 +46,7 @@ const Header = () => {
 
             
 
-            {user ? (<button onClick={() => signOut(auth)}>SignOut</button>) : <div className='userToggle'>
+            {user ? (<button className='user-pic' onClick={() => signOut(auth)}> <img src={user.photoURL} alt="" /> SignOut</button>) : <div className='userToggle'>
             
             <NavLink
                 to="/Login"

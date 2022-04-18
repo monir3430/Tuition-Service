@@ -82,7 +82,7 @@ const Signup = () => {
 
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/Services";
+    const from = location.state?.from?.pathname || "/Home";
 
     useEffect(() => {
         if (user) {
