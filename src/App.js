@@ -10,6 +10,7 @@ import Login from './Login/Login';
 import NotFound from './NotFound/NotFound';
 import Services from './Services/Services';
 import Signup from './Signup/Signup';
+import RequiredAuth from './RequiredAuth/RequiredAuth';
 
 function App() {
   return (
@@ -20,6 +21,14 @@ function App() {
         <Route path='/Home' element = {<Home></Home>}></Route>
         <Route path='/Services' element = {<Services></Services>}></Route>
         <Route path='/Contact' element = {<Contact></Contact>}></Route>
+        <Route path='/Services' element = {
+
+          <RequiredAuth>
+            <Services/>
+          </RequiredAuth>
+        }>
+          
+        </Route>
        
   
         <Route path='/Blogs' element = {<Blogs></Blogs>}></Route>
